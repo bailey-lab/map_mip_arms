@@ -1,0 +1,14 @@
+#panel name
+panel_name: DR23K
+
+#folder where output will go
+output_folder: test_output
+
+#location of mip arms file
+mip_arms_file: /nfs/jbailey5/baileyweb/bailey_share/resources/MIP_project_resources/DR23K/mip_ids/DR23K_mip_arms
+
+genome_name: PlasmoDB-62-Pfalciparum3D7-Genome
+
+#location of genome to map to
+genome_path: /nfs/jbailey5/baileyweb/bailey_share/UCSC_genome_browsers/private_UCSC_genome_browser/Pf_3D7/Pf_3D7_genome/PlasmoDB-62_Pfalciparum3D7_Genome.fasta
+
