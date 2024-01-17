@@ -10,7 +10,8 @@ output=config['output_folder']
 
 rule all:
 	input:
-		filtered_psl=output+'/'+config['panel_name']+'_'+config['genome_name']+'_mips_filtered.psl'
+		filtered_psl=output+'/'+config['panel_name']+'_'+config['genome_name']+'_mips_filtered.psl',
+		filtered_bed=output+'/'+config['panel_name']+'_'+config['genome_name']+'_mips_filtered.bed'
 rule arms_to_fasta:
 	'''
 	converts ligation and extension arms into fasta sequences for mapping onto
@@ -48,6 +49,19 @@ rule filter_best_hit:
 		coords_file=output+'/'+config['panel_name']+'_'+config['genome_name']+'_genomic_coords.tsv'
 	script:
 		'scripts/filter_best_hit.py'
+
+rule psl_to_bed:
+	'''
+	converts a psl file into a bed file for other downstream analysis programs
+	'''
+	input:
+		filtered_psl=output+'/'+config['panel_name']+'_'+config['genome_name']+'_mips_filtered.psl'
+	conda:
+		'envs/pslToBed.yaml'
+	output:
+		filtered_bed=output+'/'+config['panel_name']+'_'+config['genome_name']+'_mips_filtered.bed'
+	shell:
+		'pslToBed {input.filtered_psl} {output.filtered_bed}'
 
 rule make_hub:
 	'''
