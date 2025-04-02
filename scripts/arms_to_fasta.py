@@ -26,7 +26,7 @@ for line_number, line in enumerate(open(arms_file)):
 		mip_family=line[mip_family_c]
 		mip_id=line[mip_id_c]
 		seq_name=f'>{gene}_{mip_family}_{mip_id}'
-		catted_seq=ext_seq+lig_seq
+		catted_seq=ext_seq+'NNNNN'+lig_seq
 		mips_fasta.write(seq_name+'\n')
 		mips_fasta.write(catted_seq+'\n')
 		

@@ -1,11 +1,11 @@
 #panel name
-panel_name: DR23K
+panel_name: pfsmarrt_v13
 
 #folder where output will go
 output_folder: test_output
 
 #location of mip arms file
-mip_arms_file: /nfs/jbailey5/baileyweb/bailey_share/resources/MIP_project_resources/DR23K/mip_ids/DR23K_mip_arms
+mip_arms_file: /nfs/jbailey5/baileyweb/asimkin/other_people/juliano/map_v13_pfsmarrt_02-04-25/pfsmarrt_v13_arms.txt
 
 genome_name: PlasmoDB-62-Pfalciparum3D7-Genome
 
