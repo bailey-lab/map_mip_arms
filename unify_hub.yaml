@@ -1,0 +1,11 @@
+output_folder: unified_mip_panels
+hub_name: mip_panel
+email: alfred.simkin@gmail.com
+genome: Pf3D7
+panels:
+  - IBC2FULL_MIPS
+  - IBC2CORE_MIPS
+  - IBC_MIPs
+  - DR2_MIPs
+  - DR23K_MIPs
+  - DR23KE_MIPs
