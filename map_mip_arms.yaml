@@ -1,14 +1,20 @@
-#panel name
-panel_name: pfsmarrt_v13
+#panel name (avoid spaces and underscores in panel name for proper snakemake parsing)
+panel_name: DR23KE-MIP-panel
+
+#email address of submitter - so if anyone has questions they know who to ask
+email: alfred.simkin@gmail.com
+
+#number of summed mismatches allowed across both MIP arms relative to the genome
+error_count: 4
 
 #folder where output will go
-output_folder: test_output
+output_folder: DR23KE_MIPs
 
 #location of mip arms file
-mip_arms_file: /nfs/jbailey5/baileyweb/asimkin/other_people/juliano/map_v13_pfsmarrt_02-04-25/pfsmarrt_v13_arms.txt
+mip_arms_file: /nfs/jbailey5/baileyweb/bailey_share/resources/MIP_project_resources/DR23KE/mip_ids/mip_arms.txt
 
-genome_name: PlasmoDB-62-Pfalciparum3D7-Genome
+#genome name as known to UCSC browser
+genome_name: Pf3D7
 
 #location of genome to map to
 genome_path: /nfs/jbailey5/baileyweb/bailey_share/UCSC_genome_browsers/private_UCSC_genome_browser/Pf_3D7/Pf_3D7_genome/PlasmoDB-62_Pfalciparum3D7_Genome.fasta
-
